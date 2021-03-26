@@ -1,8 +1,7 @@
 
 var mongoose = require('mongoose');
 
-const connectionString =
-"mongodb://localhost:27017/mongoose-demo-fullstack";
+const connectionString ="mongodb://localhost:27017/mongoose-demo";
 
 
 const handleSuccess = () => console.log("Mongoose connected successfully "); // resolve()
