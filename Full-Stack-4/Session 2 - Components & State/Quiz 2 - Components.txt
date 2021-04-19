@@ -1,0 +1,36 @@
+1. what is the method used to modify state in React component?
+
+Correct: setState
+Option 1: changeState
+Option 2: alterState
+
+
+2. what is the difference between props and state?
+
+
+Correct: Props is readonly and State can change
+Option 1: No difference
+Option 2: Props can change and State is readonly
+
+
+3. what allows you to hook into components operations at different times?
+
+Correct: component lifecycle
+Option 1: component cache
+Option 3: component state
+
+
+
+4. React uses a virtual representation of the UI to track changes, what is this called?
+
+Correct: Virtual DOM
+Option 1: Incremental DOM
+Option 2: Cache DOM
+
+
+
+5. Functional components by default have state?
+
+
+Correct: False
+Option 1: True

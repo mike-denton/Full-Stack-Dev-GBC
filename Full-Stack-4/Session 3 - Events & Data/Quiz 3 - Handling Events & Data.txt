@@ -1,0 +1,32 @@
+1. Async/Await code in a way makes asynchronous code behave more like synchronous code
+
+
+Option 1: True *
+Option 2: False
+
+2. How would you create a click event handler in JSX?
+
+c. onClick  *
+a. onclick 
+b. click
+
+
+3. In JSX, what is the format of React named events?
+
+Option 3: camalCase *
+Option 1: lowercase
+Option 2: pascalCase
+
+
+4. What is a special string attribute we can add to JSX to help React identify which items have (added/removed/re-ordered)?
+
+a. key  *
+b. id 
+c. name
+
+5. What is Axios?
+
+Option 2: A promise-based HTTP Client *
+Option 1: A React render library
+Option 3: An Express API middleware package
+
