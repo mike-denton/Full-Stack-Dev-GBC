@@ -1,6 +1,6 @@
 
 const buildArray = function(num) {
-    var array =  new Array(); //[];
+    var array =  [];
 
     for(var i=0; i < num; i++) {
         array.push(i);

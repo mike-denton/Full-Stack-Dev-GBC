@@ -1,7 +1,7 @@
 
 const findFacts = function(city) {
     // 	let {name, population ,continent}=city;
-	return `${city.name} has a population of ${city.population} and located in ${city.continent}`;
+	console.log(`${city.name} has a population of ${city.population} and located in ${city.continent}`);
 }
 
 
