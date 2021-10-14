@@ -16,9 +16,6 @@ const codeBlocker = () => {
     
 }
 
-
-
-
 log('Synchronous 1')
 log(codeBlocker())
 log('Synchronous 2')

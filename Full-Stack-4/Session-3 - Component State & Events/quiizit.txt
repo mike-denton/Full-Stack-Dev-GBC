@@ -1,0 +1,60 @@
+1. What kind of React components traditionally have state?
+
+Functional Components
+Class Components *
+All Components 
+
+2. What statement is correct about props in React?
+
+Props are readonly and cannot change *
+Props can change at any time
+Props manage their own internal state
+
+3. What statement is correct about state in React?
+
+State is readonly and cannot change 
+State can change internally at any time *
+There is no state in React
+
+4. How do we change state in React?
+
+We change state directly using state keyword
+We change state indirectly using setState *
+We never change state 
+
+5. What does the extends mean in JavaScript?
+
+It is used to create a child class of another class (parent) *
+It is used to create a parent class of another class (child)
+It is used to extend the Node.js architecture
+
+[Quiz 2]
+6. What are some React component lifecycle methods?
+
+a. componentWillMount, componentDidMount *
+b. onLoad, onUnLoad
+c. onPostback, onInit
+
+7. How do we get data into a component?
+
+a. events
+b. state
+c. props  *
+
+8. How do we get data out of a component?
+
+a. events *
+b. state
+c. props
+
+9. Which is the correct syntax for jsx click event attribute?
+
+a. onclick
+b. click
+c. onClick *
+
+10. Handling events in React is similar to 
+
+a. DOM events in the browser *
+b. Angular two way binding
+c. Node full duplex event stream

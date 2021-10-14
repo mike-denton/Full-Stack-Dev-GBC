@@ -1,0 +1,35 @@
+1. What is fetch API used for?
+
+- A simple interface for fetching resource using HTTP *
+- A server side npm package for HTTP middleware
+- A promise-based library used with Node.js and your browser to
+make HTTP requests
+
+2. What is Axios?
+
+- A simple interface for fetching resource using HTTP 
+- A server side npm package for HTTP middleware
+- A promise-based library used with Node.js and your browser to
+make HTTP requests *
+
+3. What is a difference between Axios and Fetch?
+
+- Axios is written in Node.js and Fetch is written in JavaScript
+- There is no difference
+- Axios is an installed npm package, Fetch is built into browser *
+
+4. Why use Axios instead of fetch?
+
+- Axios performs automatic transforms of JSON data, Fetch is a two step process
+
+- Axios provides protection against cross-site request forgery (CSFR) attacks
+
+- Supports older browsers and has a way to abort a request.
+
+- All of the above *
+
+5.  Why use keys in React?
+
+- to allow props to be used on the element
+- to help React identify which items have changed *
+- to hep React render components faster

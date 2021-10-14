@@ -18,9 +18,12 @@ return Promise.resolve().then(v => {
 
 }
 
-
-
+const handleCodeBlocker = () => {
+    return codeBlocker()
+    .then(result => console.log(result))
+    .catch(err => console.log(err))
+}
 
 log('Synchronous 1')
-log(codeBlocker().then(result => console.log(result)))
+log(handleCodeBlocker())
 log('Synchronous 2')
