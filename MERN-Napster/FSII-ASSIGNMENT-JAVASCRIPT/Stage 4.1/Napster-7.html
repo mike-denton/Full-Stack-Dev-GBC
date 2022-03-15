@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Napster - Music Sharing</title>
+   <link href="styles/Napster-ux.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body style="text-align:center;">
+    <fieldset>
+      <legend>Music Search</legend>
+    
+  <form id="regForm" autocomplete="on" >
+    <div class="form-container">
+        <div >
+          <label>
+            Artist:
+              <input
+              id="txtArtist"
+              name="song"
+              type="text"
+              placeholder="Enter the Artist Name"
+              autofocus
+            />
+          </label>
+        </div>
+        <div>
+          <label>Song:
+            <input
+            id="txtSong"
+            name="song"
+            type="song"
+            placeholder="Enter the Song Title"
+          />
+          </label>
+        </div>
+        <div>
+          <label>Album:
+            <input
+            id="txtAlbum"
+            name="album"
+            type="album"
+            placeholder="Enter the Album name"
+          />
+          </label>
+        </div>
+        <div >
+          <label>Genre:
+            <select id="txtGenre" name="txtGenre">
+              <option value selected>Select a Genre</option>
+              <option value="alternative">Alternative</option>
+              <option value="classicrock">Classic Rock</option>
+              <option value="classical">Classical</option>
+              <option value="easylistening">Easy Listening</option>
+              <option value="electronic">Electronic</option>
+              <option value="heavymetal">Heavy Metal</option>
+              <option value="hiphop">Hip-Hop</option>
+              <option value="instrumental">Instrumental</option>
+              <option value="jazz">Jazz</option>
+              <option value="pop">Pop</option>
+              <option value="punkrock">Punk Rock</option>
+              <option value="rap">Rap</option>
+              <option value="other">Other</option>
+          </select>
+          </label>
+        </div>
+        <div >
+          <button id="btnSearch" type="button" value="Search" class="search-button"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</button>
+          <button id="btnReset" type="button" value="Search" class="search-button"><i class="fa fa-rotate-left"></i>&nbsp;&nbsp;Reset</button>
+        </div>
+    </div>
+    </form>
+    
+    <!-- Album Listings -->
+    <div class="album-listing-container">
+        <table id="favoriteListContainer">
+          <tr>
+              <td><img src="images/Def-Lepard.JPG" title="Def Leppard - Hysteria" ></td>
+              <td><img src="images/Guns-Roses.JPG" title="Guns N'Roses - Greatest Hits"></td>
+              <td><img src="images/Journey.JPG" title="Journey - Greatest Hits"></td>
+              <td><img src="images/Kiss.JPG" title="Kiss - Gold Gin"></td>
+              <td><img src="images/Motley-Crue.JPG" title="Motley Crue - 10 seconds to Love"></td>
+          </tr>
+      </table>
+    </div>
+    <!-- Music Listings -->
+    <div id ="searchResultsContainer" class="music-listing-table-container">
+      <table id="musicTable" class="music-listing-table">
+        <thead>
+        <tr>
+            <th>Artist</th>
+            <th>Song</th>
+            <th>Time</th>
+            <th>Album</th>
+            <th>Rating</th>
+            <th>Genre</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody id="searchResults">
+            <tr>
+                <td>Journey</td>
+                <td>Don't Stop Believing</td>
+                <td>3:50</td>
+                <td>Greatest Hits</td>
+                <td>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </td>
+                <td><Button><i class="fa fa-download"></i>&nbsp;Download</Button></td>
+            </tr>
+            <tr>
+                <td>Motley Crue</td>
+                <td>Tens Seconds to Love</td>
+                <td>3:50</td>
+                <td>Shout At The Devil</td>
+                <td>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-o"></i>
+                  <i class="fa fa-star-o"></i>
+                </td>
+                <td><Button><i class="fa fa-download"></i>&nbsp;Download</Button></td>
+              </tr>
+            <tr>
+                <td>Motely Crue</td>
+                <td>Wild Side</td>
+                <td>2:83</td>
+                <td>Greatest Hits</td>
+                <td>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </td>
+                <td><Button><i class="fa fa-download"></i>&nbsp;Download</Button></td>
+                </tr>
+            <tr>
+                <td>Def Leppard</td>
+                <td>Photograph</td>
+                <td>3:50</td>
+                <td>Histeria</td>
+                <td>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-o"></i>
+                </td>
+                <td>
+                    <Button><i class="fa fa-download"></i>&nbsp;Download</Button>
+                </td>
+            </tr>
+            <tr>
+                <td>Kiss</td>
+                <td>Lord of Thunder</td>
+                <td>5:53</td>
+                <td>Destroyer</td>
+                <td>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-o"></i>
+                </td>
+                <td><Button><i class="fa fa-download"></i>&nbsp;Download</Button></td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+   
+  </body>
+  </html>

@@ -1,0 +1,122 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+      <title>Napster - Music Sharing</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" rel="stylesheet" media="screen">
+      <link href="styles/Napster-ux.css" rel="stylesheet">
+   <!-- <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ 
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+    
+    
+   <script>
+ 
+    </script>
+    <script src="scripts/main.js"></script>
+  </head>
+  <body style="text-align:center;">
+    <fieldset>
+      <legend>Music Search</legend>
+    
+  
+      <form id="regForm" autocomplete="on" >
+        <div class="form-container">
+            <div >
+              <label>
+                Artist:
+                  <input
+                  id="txtArtist"
+                  name="song"
+                  type="text"
+                  placeholder="Enter the Artist Name"
+                  autofocus
+                />
+              </label>
+            </div>
+            <div>
+              <label>Song:
+                <input
+                id="txtSong"
+                name="song"
+                type="song"
+                placeholder="Enter the Song Title"
+              />
+              </label>
+            </div>
+            <div>
+              <label>Albulm:
+                <input
+                id="txtAlbulm"
+                name="albulm"
+                type="albulm"
+                placeholder="Enter the Albulm name"
+                size="50"
+              />
+              </label>
+            </div>
+            <div >
+              <label>Genre:
+                <select id="txtGenre" name="txtGenre">
+                  <option value selected>Select a Genre</option>
+                  <option value="Hard Rock">Hard Rock</option>
+                  <option value="Country Rock">Country Rock</option>
+                  <option value="Hip Hop">Hip Hop</option>
+              </select>
+              </label>
+            </div>
+            <div >
+              <button id="btnSearch" type="button" value="Search" class="search-button"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</button>
+              <button id="btnReset" type="button" value="Search" class="search-button"><i class="fa fa-rotate-left"></i>&nbsp;&nbsp;Reset</button>
+            </div>
+        </div>
+        </form>
+        
+    <!-- Album Listings -->
+    <div class="album-listing-container">
+        <table id="favoriteListContainer">
+        </table>
+    </div>
+    <!-- Music Listings -->
+    <div id ="searchResultsContainer" class="music-listing-table-container">
+      <table id="musicTable" class="music-listing-table">
+        <thead>
+        <tr>
+          <th>Artist</th>
+          <th>Song</th>
+          <th>Time</th>
+          <th>Album</th>
+          <th>Rating</th>
+          <th>Genre</th>
+          <th></th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody id="searchResults">
+
+        </tbody>
+      </table>
+    </div>
+   
+
+<div id="dialog-message" title="Download completed" style="display:none;" >
+  <p>
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 25px 0;"></span>
+    Your files have downloaded successfully...
+  </p>
+</div>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+  </html>
