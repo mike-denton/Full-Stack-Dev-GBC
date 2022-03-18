@@ -130,7 +130,7 @@ const handleSongButtonClick = (e) => {
     
 }
 const setupHandlers = () => {
-    getElement('#btnSearch').addEventListener('click', handleSearch);
+    getElement('#btnSearch').on('click', handleSearch);
     getElement('#btnReset').addEventListener('click', handleReset);
     getAllElements('input')
                 .forEach(input => input.addEventListener('keyup', handleInputKeyUp));
