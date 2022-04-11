@@ -15,7 +15,7 @@
                 </ul>
             </nav>
             <h1>getElementsByClassName Demo</h1>
-            <button class="disabled">Submit</button>
+            <button id="btnSubmit" class="disabled">Submit</button>
         </header>
     </div>
 
@@ -27,6 +27,19 @@
 
         console.log(menu);
         console.log(items);
+
+
+        window.onload = (event) => {
+        console.log('page is fully loaded');
+
+        let btnSubmit = document.querySelector('#btnSubmit')
+        //btnSubmit.onclick(() => alert('clicked'))
+        btnSubmit.addEventListener('click', () => { alert('cicked me')})
+        };
+
+    
+
+
     </script>
 </body>
 </html>
