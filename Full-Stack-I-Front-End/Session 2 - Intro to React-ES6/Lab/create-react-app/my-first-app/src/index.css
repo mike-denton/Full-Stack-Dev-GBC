@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  background-color: lightblue;
+  border: 1px black solid;
+  border-radius: 1em;
+  text-align: center;
+  width: 50%;
+  max-height: auto;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;     /* make main axis horizontal (default setting) */
+  justify-content: center; /* center items horizontally, in this case */
+  align-items: center;     /* center items vertically, in this case */
+  padding: 25px;
+}
+
+.like-button {
+  margin: 5px;
+  height: 50px;
+  width: 20%;
+}
