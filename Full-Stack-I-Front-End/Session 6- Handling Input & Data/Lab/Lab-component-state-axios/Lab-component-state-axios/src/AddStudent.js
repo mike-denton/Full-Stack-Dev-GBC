@@ -27,6 +27,10 @@ export default class PersonList extends React.Component {
       });
   };
 
+  onComponentDidMount() {
+    
+  }
+
   render() {
     return (
       <>
