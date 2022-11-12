@@ -1,0 +1,42 @@
+1. What programming language is Node written in ?
+
+
+Option 2: C++ *
+
+Option 1: Typescript
+
+
+Option 3: Javascript
+
+2. What programming language is V8 written in?
+
+Option 3: C++ *
+
+Option 1: Java
+
+Option 2: Javascipt
+
+
+
+3. What is V8 Engine in context of this course?
+
+
+Option 1: Google's open source high-performance JavaScript engine. *
+
+Option 2: Version 8 of IBM Web Sphere
+
+Option 3: A high performance internal combustion car engine with 8 cylinders.
+
+4. Traditionally Javascript has been which of the following
+
+Option 1: Dev Ops deployment strategy
+
+Option 2: Client side scripting language *
+
+Option 3: server compiler
+
+5. What does NPM mean?
+
+a. Node Package Manager  *
+b. Node Process Manager
+c. Node Package Monitor 
