@@ -4,8 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require('./routes/index');  // index.html
+var usersRouter = require('./routes/users');  // user modules...
 
 var app = express();
 
@@ -24,12 +24,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // middleware => express router => app.use
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/user', usersRouter);  //users/details
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+app.use('/wallet', walletRouter)
+
+
 
 // error handler
 app.use(function(err, req, res, next) {

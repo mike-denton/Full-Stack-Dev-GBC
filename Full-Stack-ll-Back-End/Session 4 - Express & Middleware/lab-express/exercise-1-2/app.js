@@ -5,6 +5,7 @@ app.listen(8083);
 
 const getStrFromDate = (_d) => new Date(_d).toLocaleString();
 
+// request ====> middleware /requestTime ====> next() =====> handleGreetRequest ====> end/send response...
 let requestTime = (req, res, next) => {
     req.requestTime = Date.now();
     next();
@@ -13,10 +14,12 @@ let requestTime = (req, res, next) => {
 // use => middle = expess
 app.use(requestTime);
 
-app.get("/greet", (req, res) => {
+const handleGreetRequest = (req, res) => {
     console.log(`GET received: ${getStrFromDate(req.requestTime)}`);
     res.send("hello GET world!");
-});
+}
+
+app.get("/greet", handleGreetRequest);
 
 app.post("/greet", (req, res) => {
     console.log(`POST received: ${getStrFromDate(req.requestTime)}`);

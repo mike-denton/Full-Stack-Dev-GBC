@@ -1,0 +1,77 @@
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.13.5/css/ui.jqgrid.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.13.5/js/jquery.jqgrid.min.js"></script>
+		<title>GBC Chat</title>
+	</head>
+	<body>
+        <div data-role="page" id="page1">
+            <div data-role="header">
+                <h1>Chat History</h1>
+                <select name="room" id="room" onchange="updateGrid(this)">
+                    <option value="Brazil">Brazil</option>
+                    <option value="Canada">Canada</option>
+                    <option value="USA">USA</option>
+                </select>
+            </div>
+            <div role="main" class="ui-content">
+                <table id="photos" class="display" cellspacing="0" width="100%">
+                </table>
+                <div id="pager2" style="height: 30px;"></div>
+                </div>
+            </div>
+            
+        </div>
+        
+	</body>
+    <script>
+          $(document).ready(function(){
+            $("#photos").jqGrid({
+                url:'http://localhost:3001/chathistory',
+                datatype: "json",
+                colNames:['Username', 'Message', 'Room', 'Date Time', 'socketId'],
+                colModel:[
+                    {name:'chatUsername',index:'chatUsername', width:200},
+                    {name:'chatMessage',index:'chatMessage', width:500},
+                    {name:'chatRoom',index:'chatRoom', width:100},
+                    {name:'chatDateTime',index:'chatDateTime', width:200},
+                    {name:'socketId',index:'socketId', width:250}
+                ],
+                rowNum:20,
+                loadonce: true,
+                rowList:[20,40,60],
+                pager: '#pager2',
+                sortname: 'id',
+                viewrecords: true,
+                sortorder: "desc",
+                caption:""
+            });
+        });
+        function updateGrid(opc) {
+            var roomSelected = opc.options[opc.selectedIndex].value;
+            $("#photos").jqGrid('GridUnload');
+            $("#photos").jqGrid({
+                url:"http://localhost:3000/chathistory?room=" + roomSelected,
+                datatype: "json",
+                colNames:['Username', 'Message', 'Room', 'Date Time', 'socketId'],
+                colModel:[
+                    {name:'chatUsername',index:'chatUsername', width:200},
+                    {name:'chatMessage',index:'chatMessage', width:500},
+                    {name:'chatRoom',index:'chatRoom', width:100},
+                    {name:'chatDateTime',index:'chatDateTime', width:200},
+                    {name:'socketId',index:'socketId', width:250}
+                ],
+                rowNum:20,
+                loadonce: true,
+                rowList:[20,40,60],
+                pager: '#pager2',
+                sortname: 'id',
+                viewrecords: true,
+                sortorder: "desc",
+                caption:""
+            });
+        }
+    </script>
+</html>
