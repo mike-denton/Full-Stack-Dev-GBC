@@ -14,7 +14,7 @@ const Display = function () {
   }
 
   return <div class="container">
-     <Greeter />
+     <Greeter /> 
     { likes }
   </div>
 }
