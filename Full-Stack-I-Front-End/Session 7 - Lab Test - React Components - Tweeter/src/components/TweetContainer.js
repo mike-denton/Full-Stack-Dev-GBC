@@ -22,6 +22,7 @@ class TweetContainer extends React.Component {
         this.setState({statusList:[...this.state.statusList, this.state.value], value:''});
     };
 
+
     render() { 
         return ( 
             <div className="tweet-container"> 

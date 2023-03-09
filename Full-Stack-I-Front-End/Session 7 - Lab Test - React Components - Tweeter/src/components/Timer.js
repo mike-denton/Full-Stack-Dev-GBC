@@ -1,6 +1,9 @@
 import React from 'react';
 import Moment from 'react-moment';
 
+function Timers () {
+    
+}
 class Timer extends React.Component {
     constructor (props){
         super(props);
