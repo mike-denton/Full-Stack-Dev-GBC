@@ -11,3 +11,6 @@ const greaterThanSize = function () {
 };
 
 greaterThanSize();
+
+
+// random js comments
