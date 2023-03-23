@@ -1,0 +1,14 @@
+{
+  "name": "adf",
+  "version": "1.0.0",
+  "description": "asdf",
+  "main": "asdf",
+  "scripts": {
+    "test": "ads"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.7.2"
+  }
+}
