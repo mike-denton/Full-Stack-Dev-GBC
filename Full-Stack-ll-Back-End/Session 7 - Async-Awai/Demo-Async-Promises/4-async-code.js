@@ -17,9 +17,37 @@ const codeBlocker = () => {
 }
 
 
+const getData = async () => {
+    const data = await axios.get('localhost');
+    console.log(data )
+}
+
+const fetchData = async () => {
+    try {
+        /// logic to executed.....
+        const jsonData = await window.fetch('localhost')
+        const data = jsonData.toJSON()
+    }
+    catch (ex) {
+        console.error(ex)
+    }
+}
+
+
+// const fetchDataPromise = () => {
+//    window.fetch('localhost')
+//     .then(data => {
+//         return data
+//     })
+//     .then(result => { returnresult.toJSON() })
+//     .catch(error => console.error(error))
+// }
+
+
 const  asyncNonBlocker = async () => {
     const x = await codeBlocker();
     const y = await codeBlocker();
+
 
     return Promise.all([x, y]);
 }

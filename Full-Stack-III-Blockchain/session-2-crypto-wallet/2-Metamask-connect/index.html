@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wallet Balance</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+    <script src="https://cdn.jsdelivr.net/npm/web3@0.19.0/dist/web3.js"></script>
+   
+  </head>
+  <body>
+    <main>
+
+        <div class="container bg-light">
+        <div class="col-md-12 text-center">
+            <button 
+              id="connect_button" 
+              type="button" 
+              class="btn btn-lg btn-primary"
+              onclick="connectMetaMask()"
+              >
+              Connect MetaMask Wallet
+            </button>
+        </div>
+    </div>
+
+        <section id="wallet_info" class="well text-center">
+            <h1 id="wallet_address"></h1>
+            <h2><span id="wallet_balance"></span></h2>
+        </section>
+    </main>
+
+    <script>
+      const Web3 = require('web3');
+      const web3 = new Web3(window.ethereum)
+
+      const connectMetaMask = async() => {
+      console.log(`connect MetaMask handler clicked..`)
+
+      getWeb3()
+
+}
+const addMetaMaskNetwork = (address) => {
+    ethereum.request({
+        method: 'wallet_addEthereumChain',
+        params: [{ 
+            chainId: address, //web3.utils.toHex('137'),
+            chainName: 'Polygon',
+            nativeCurrency: {
+                name: 'MATIC',
+                symbol: 'MATIC',
+                decimals: 18
+            },
+            rpcUrls: ['https://polygon-rpc.com'],
+            blockExplorerUrls: ['https://www.polygonscan.com']
+        }],
+    })
+    .then(() => console.log('network added'))
+    .catch(() => console.log('could not add network'))
+}
+
+
+  const getWeb3 = async () => {
+    if(window.ethereum !== undefined) {
+          console.log(`window ethereum exists..`)
+          const accounts = await window.ethereum.request({ method: "eth_requestAccounts" })
+          console.log(`MetaMask accounts found : ${accounts}`)
+          walletAddress = accounts[0]
+          document.getElementById("wallet_address").innerHTML = walletAddress
+
+          var balance = web3.eth.getBalance(walletAddress, function(error,result){
+
+            if(error){
+              console.log(error)
+            }
+            else{
+              console.log(result)
+            }
+          })
+
+          balance = web3.toDecimal(balance);
+          console.log(`wallet balance : ${balance}`)
+          document.getElementById("wallet_balance").innerHTML = `Balance: ${ balance }`
+        }
+      else {
+        console.log(`windows ethereum not found`)
+      }
+    
+      /// 
+      addMetaMaskNetwork(walletAddress)
+  }
+    </script>
+ 
+  </body>
+</html>

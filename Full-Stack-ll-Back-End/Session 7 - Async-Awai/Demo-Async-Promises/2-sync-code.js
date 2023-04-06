@@ -7,10 +7,15 @@ const log = (v) => console.log(`${v} \n Elapsed: ${Date.now() - tick} ms`)
 const codeBlocker = () => {
 
     let i = 0;
-    while (i < 10000000000) { i++;}
+    while (i < 10000000000) { 
+        i++;
+        //console.log(i)
+    }
 
     return 'billion loops is done';
 }
+
+//console.log(`pid : ${process.pid}`)
 
 log('Synchronous 1')
 log(codeBlocker())
