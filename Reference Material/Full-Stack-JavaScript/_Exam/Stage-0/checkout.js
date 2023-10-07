@@ -1,1 +1,0 @@
-const isCCValid = (ccn) => ccn !== null && !Number.isNaN(parseInt(ccn)) && ccn.length > 13;
