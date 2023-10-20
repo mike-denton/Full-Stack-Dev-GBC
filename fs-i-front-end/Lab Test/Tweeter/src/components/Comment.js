@@ -4,7 +4,6 @@ import LikeButton from './LikeButton';
 
 class Comment extends React.Component {
     
-    state = {  }
     render() { 
         return (
             <div>

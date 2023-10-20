@@ -9,7 +9,11 @@ class LikeButton extends React.Component {
 
     handleOnClick = event =>{
         event.preventDefault();
-        this.setState({countLikes: ++this.state.countLikes});
+        this.setState(
+            {
+                countLikes: this.state.countLikes + 1
+            }
+            );
     };
 
     render() { 

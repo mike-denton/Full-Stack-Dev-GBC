@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Counter from './components/Counter';
 import Sibling from './components/Sibling';
@@ -29,6 +28,7 @@ const App = () => {
             <FruitList />
         </div>
     );
+
 };
 
 export default App;
