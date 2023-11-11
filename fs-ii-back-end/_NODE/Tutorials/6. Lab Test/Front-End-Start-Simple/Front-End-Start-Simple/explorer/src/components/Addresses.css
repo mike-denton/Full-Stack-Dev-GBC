@@ -1,0 +1,12 @@
+.AddressLink {
+    color: blueviolet;
+    font-size: 15px;
+    text-decoration: underline;
+    margin: 4px;
+}
+
+.AddressContainer {
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+}
